@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="..\template\index.html#home">Home</a></li>
+                <li><a href="..\template\index.html#team">Team</a></li>
+                <li><a href="..\template\index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Daily Weather in Your City</h1>
+
+    <div class="flip-container" id="flip-container">
+        <div class="flipper">
+            <div class="front">
+                <div class="converter">
+                    <form id="temperature-form">
+                        <label for="t_c">Temperature in Celsius</label>
+                        <input type="number" id="t_c" min="-60" max="53" placeholder="Celsius">
+
+                        <label for="t_f">Temperature in Fahrenheit</label>
+                        <input type="number" id="t_f" min="-76" max="127" placeholder="Fahrenheit">
+
+                        <label for="t_k">Temperature in Kelvin</label>
+                        <input type="number" id="t_k" min="213" max="326" placeholder="Kelvin">
+
+                        <div class="button-group">
+                            <button type="button" id="temp_calc" onclick="tempConvert()">Calculate</button>
+                            <button type="reset" id="reset" title ="reset"><i class="fa fa-refresh"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="thermometer-container">
+                    <div class="thermometer">
+                        <div class="thermometer-fill" id="thermometer-fill"></div>
+                    </div>
+                    <div class="thermometer-label" id="thermometer-label"></div>
+                </div>
+            </div>
+            <div class="back">
+                <form id="weather-form">
+                    <label for="city">Select Your City</label>
+                    <select id="city">
+                        <option value="">--Select--</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                    </select>            
+                    <div class="button-group">
+                        <button type="button" id="city_stat" onclick="getCityWeather()">Get Weather</button>
+                        <button type="reset" title="reset"><i class="fa fa-refresh"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <button type="button" class="flip-button" onclick="flipCard()" id="flipBtn">Flip</button>
+
+
+    <div class="weather-output-container" id="weather-output">
+        <!-- Weather output container -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

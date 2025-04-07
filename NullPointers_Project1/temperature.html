@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="temperature.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-text">Null Pointers</span>
+                <span class="logo-icon">⚡</span>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="converter-box">
+            <h1>Temperature Converter & Weather Info</h1>
+            
+            <div class="grid-container">
+                <div class="converter-section">
+                    <h2>Temperature Converter</h2>
+                    
+                    <div class="input-group">
+                        <label for="celsius">Celsius (°C)</label>
+                        <input type="number" id="celsius" placeholder="Enter temperature in Celsius">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fahrenheit">Fahrenheit (°F)</label>
+                        <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="kelvin">Kelvin (K)</label>
+                        <input type="number" id="kelvin" placeholder="Enter temperature in Kelvin">
+                    </div>
+
+                    <button id="convertBtn" class="btn">Calculate</button>
+                </div>
+
+                <!-- Weather Section -->
+                <div class="weather-section">
+                    <h2>Weather Information</h2>
+                    
+                    <div class="input-group">
+                        <label for="citySelect">Select City</label>
+                        <select style="background-color: rgb(17, 17, 17); color:white;" id="citySelect" class="city-select">
+                            <option value="">Select a city</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Pune">Pune</option>
+                        </select>
+                    </div>
+
+                    <button id="getWeatherBtn" class="btn weather-btn">Get Weather</button>
+                    <button id="toggleViewBtn" class="btn toggle-btn hidden">Toggle Table View</button>
+
+                    <div id="weatherResult" class="weather-result hidden">
+                        <div id="weatherInfo"></div>
+                    </div>
+
+                    <div id="weatherTable" class="weather-table hidden">
+                        <h3>Temperature Comparison Table</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>City</th>
+                                    <th>Temperature (°C)</th>
+                                    <th>Difference (°C)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="temperatureTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- City Cards Container -->
+        <div id="cityCards" class="city-cards"></div>
+
+        <!-- Chart Container -->
+        <div class="chart-container" id="temperatureChartContainer">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+    </div>
+    <script src="temperature.js"></script>
+</body>
+</html>

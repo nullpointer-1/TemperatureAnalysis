@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+ 
+section {
+    padding: 50px 10%;
+    /* background: #121212; */
+    margin-bottom: 50px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); */
+    transition: transform 0.3s ease-in-out;
+}
+ 
+a{
+    text-decoration: none;
+}
+ 
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+ 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    margin:5%;
+}
+ 
+/* Fixed Navbar with Better Visibility */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    margin:0;
+    z-index: 100;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+ 
+/* Navigation Links */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 0;
+}
+ 
+#navbar ul li {
+    margin: 0 20px;
+}
+ 
+#navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+ 
+#navbar ul li a:hover {
+    color: cyan;
+}
+ 
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+}
+ 
+/* Bigger Terminal Box (Centered) */
+.terminal-box {
+    background: #000;
+    padding: 130px; /* Larger box */
+    border-radius: 15px;
+    text-align: center;
+    width: 70%; /* Make terminal bigger */
+    height: 250px; /* Taller for better balance */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+ 
+/* Typing Effect (Inside Terminal) */
+.typing {
+    font-size: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid cyan;
+    padding-right: 5px;
+    font-family: monospace;
+    color: cyan;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+}
+ 
+/* Logo (Appears in Same Place) */
+.logo {
+    width: fit-content; /* Bigger but stays inside terminal */
+    height: auto;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    filter: drop-shadow(0 0 10px cyan);
+}
+ 
+.team-grid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+ 
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+ 
+.card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+ 
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid cyan;
+}
+ 
+.card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: cyan;
+}
+ 
+.card p {
+    font-size: 1rem;
+    color: #bbb;
+}
+ 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+ 
+ 
+#about {
+    text-align: center;
+    /* background: #1e1e1e; */
+}
+ 
+#about p {
+    font-size: 1.2rem;
+    color: #bbb;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+ 
+/* Team Section */
+#team {
+    /* background: #171717; */
+    text-align: center;
+}
+ 
+#team-container {
+    display: flex;
+    justify-content: center;
+}
+ 
+#team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+ 
+/* Contact Section */
+/* Footer Contact Section */
+#contact {
+    /* background: #171717; */
+    text-align: center;
+    padding: 60px 10%;
+    border-radius: 10px;
+    /* box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); */
+    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+}
+ 
+ 
+/* Contact Title */
+#contact h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 20px;
+}
+ 
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+ 
+#contact input,
+#contact textarea {
+    width: 60%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: #252525;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+ 
+#contact input:focus,
+#contact textarea:focus {
+    background: #303030;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+ 
+#contact textarea {
+    height: 120px;
+    resize: none;
+}
+ 
+/* Contact Button */
+#contact button {
+    background: cyan;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+ 
+#contact button:hover {
+    background: #00cccc;
+    transform: scale(1.05);
+}
+ 
+/* Copyright Text */
+#contact p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+ 
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact input,
+    #contact textarea {
+        width: 90%;
+    }
+}
